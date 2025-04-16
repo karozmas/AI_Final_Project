@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1266.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo10.AdminInterface">
+   <children>
+      <Label alignment="CENTER" layoutX="-1.0" prefHeight="60.0" prefWidth="1280.0" text="Admin Interface" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="60.0" prefHeight="27.0" prefWidth="206.0" text="Add new rule">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="87.0" prefHeight="251.0" prefWidth="1266.0">
+         <children>
+            <TextField fx:id="symptomsField" prefHeight="42.0" prefWidth="893.0" promptText="Symptoms (e.g., fever,headache)">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="conditionField" prefHeight="42.0" prefWidth="893.0" promptText="Conditions (e.g., Flu)">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="confidenceField" prefHeight="42.0" prefWidth="893.0" promptText="Confidence (e.g., 3)">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="recommendationArea" prefHeight="42.0" prefWidth="893.0" promptText="Recommendation details">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <HBox layoutX="22.0" layoutY="325.0" prefHeight="68.0" prefWidth="375.0">
+         <children>
+            <Button fx:id="addRule" mnemonicParsing="false" text="Add Rule">
+               <HBox.margin>
+                  <Insets right="10.0" top="2.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="DleteRule" mnemonicParsing="false" text="Delete Selected Rule">
+               <HBox.margin>
+                  <Insets right="10.0" top="2.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="Return" mnemonicParsing="false" onAction="#ReturnAction" text="Go to Hub">
+               <HBox.margin>
+                  <Insets top="2.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="15.0" layoutY="359.0" prefHeight="338.0" prefWidth="1266.0">
+         <children>
+            <TableView fx:id="TableView" prefHeight="338.0" prefWidth="1270.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="82.0" text="ID" />
+                <TableColumn fx:id="symptoms" minWidth="0.0" prefWidth="709.0" text="Symptoms" />
+                  <TableColumn fx:id="conditions" minWidth="0.0" prefWidth="134.0" text="Condition" />
+                  <TableColumn fx:id="confidence" prefWidth="173.0" text="Confidence" />
+                  <TableColumn fx:id="recommendation" prefWidth="162.0" text="Recommendation" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

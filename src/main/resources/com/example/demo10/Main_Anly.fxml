@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: F9F9F9; -fx-background-radius: 3%;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo10.DiagnosisController">
+   <children>
+      <GridPane alignment="CENTER" prefHeight="193.0" prefWidth="1280.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="62.0" minHeight="5.0" prefHeight="51.0" />
+          <RowConstraints maxHeight="405.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="381.0" minHeight="10.0" prefHeight="82.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="233.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox prefHeight="339.0" prefWidth="639.0" GridPane.rowIndex="1">
+               <children>
+                  <Label maxHeight="19.0" maxWidth="128.0" minHeight="19.0" minWidth="75.0" prefHeight="19.0" prefWidth="128.0" text="Temperature (°C):">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font></Label>
+                  <TextField fx:id="TemOfPa" maxHeight="35.0" maxWidth="440.0" minHeight="35.0" minWidth="440.0" prefHeight="35.0" prefWidth="440.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="229.0">
+                           <children>
+                              <Label maxHeight="19.0" maxWidth="128.0" minHeight="19.0" minWidth="75.0" prefHeight="19.0" prefWidth="128.0" text="Weight (kg):">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="WiOfPa" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="140.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="227.0">
+                           <children>
+                              <Label maxHeight="19.0" maxWidth="128.0" minHeight="19.0" minWidth="75.0" prefHeight="19.0" prefWidth="128.0" text="Height (cm):">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="HiOfPa" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="140.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="108.0" prefWidth="638.0" GridPane.rowIndex="2">
+               <children>
+                  <Label maxHeight="28.0" maxWidth="127.0" minHeight="19.0" minWidth="75.0" prefHeight="28.0" prefWidth="127.0" text="Symptoms">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button fx:id="historyBu" layoutX="667.0" layoutY="592.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 153, 81, 1);" text="View History" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <FlowPane fx:id="Flowpane" layoutY="170.0" prefHeight="413.0" prefWidth="1280.0">
+         <children>
+            <ScrollPane fx:id="scrollPane" fitToWidth="true" prefHeight="415.0" prefWidth="1280.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <FlowPane fx:id="symptomsPane" hgap="15.0" prefHeight="200.0" prefWidth="1280.0" vgap="10.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children></FlowPane>
+      <Button fx:id="Analyze1" layoutX="414.0" layoutY="592.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#isHelloButtonClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 153, 81, 1);" text="Analyze" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="resultLabel" layoutX="413.0" layoutY="650.0" prefHeight="50.0" prefWidth="860.0" textFill="#47cd04">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
