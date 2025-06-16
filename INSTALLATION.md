@@ -1,23 +1,23 @@
 
-# ⚙️ Installation Guide – MediSense (JavaFX Medical Assistant)
+#  Installation Guide – MediSense (JavaFX Medical Assistant)
 
 This guide explains how to set up the database and run the JavaFX-based medical assistant system on your local machine.
 
 ---
 
-## 📁 Prerequisites
+##  Prerequisites
 
 Make sure you have the following installed:
 
-- ✅ Java JDK 8+
-- ✅ JavaFX SDK (if using JDK < 11)
-- ✅ MySQL Server or XAMPP
-- ✅ MySQL Workbench (or any MySQL GUI)
-- ✅ IntelliJ IDEA, Eclipse, or any Java IDE
+-  Java JDK 8+
+-  JavaFX SDK (if using JDK < 11)
+-  MySQL Server or XAMPP
+-  MySQL Workbench (or any MySQL GUI)
+-  IntelliJ IDEA, Eclipse, or any Java IDE
 
 ---
 
-## 🗂️ Step 1: Import the Database
+## Step 1: Import the Database
 
 1. Open **MySQL Workbench** or any SQL tool.
 2. Create a new database named:
@@ -42,7 +42,7 @@ Make sure you have the following installed:
      mysql -u root -p expert_system < path/to/expert_system.sql
      ```
 
-✅ This will create all necessary tables like:
+ This will create all necessary tables like:
 
 - `users`
 - `diagnosis_history`
@@ -50,7 +50,7 @@ Make sure you have the following installed:
 
 ---
 
-## 🧠 Step 2: Configure Java Project
+##  Step 2: Configure Java Project
 
 1. Open the JavaFX project in your IDE.
 2. Make sure you have the following libraries:
@@ -64,18 +64,18 @@ Make sure you have the following installed:
    String password = "";
    ```
 
-> ⚠️ If you use XAMPP, make sure MySQL is **running**.
+>  If you use XAMPP, make sure MySQL is **running**.
 
 ---
 
-## ▶️ Step 3: Run the Project
+##  Step 3: Run the Project
 
 1. Compile and run the `Main.java` class.
 2. The application should open with the login or register screen.
 
 ---
 
-## ✅ Notes
+##  Notes
 
 - All diagnosis rules are stored in the `rules` table.
 - You must create at least one admin user to manage the system.
@@ -83,7 +83,7 @@ Make sure you have the following installed:
 
 ---
 
-## 🧪 Sample Admin Credentials
+##  Sample Admin Credentials
 
 If included in the database:
 
