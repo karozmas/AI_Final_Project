@@ -10,7 +10,7 @@ public class DatabaseConnection {
             return DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/expert_system", // DB name
                     "root",                                          // Username
-                    "Abdulelah431008215@"                                               // Password (empty)
+                    ""                                               // Password (empty)
             );
         } catch (SQLException e) {
             e.printStackTrace();
