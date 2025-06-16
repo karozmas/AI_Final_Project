@@ -66,8 +66,8 @@ This project is a desktop-based AI-powered Medical Assistant built using **JavaF
 
 ### ▶️ Steps to Run:
 
-## if you want try the project go to 
-<a src="INSTALLATION.md">INSTALLATION.md</a>
+## if you want try the project go to INSTALLATION.md
+
 ## 🙏 Acknowledgments
 
 We would like to express our sincere appreciation to everyone who contributed to the development of this project. Special thanks to all team members for their efforts, collaboration, and dedication throughout all stages of building this AI-driven medical assistant.
